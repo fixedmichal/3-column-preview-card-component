@@ -19,7 +19,7 @@ html, body {
 }
 
 main {
-    height: 100vh;
+    /* height: 100vh; */
     display:flex;
     justify-content: center;
     align-items: center;
@@ -44,22 +44,24 @@ p {
 
 img {
     height: 40px;
-    width:64px;
+    width: 64px;
 }
 
 .container {
     min-height: 500px;
     margin: auto;
     padding: 0;
-    width:50%;
+    width:60%;
     display:flex;
+    justify-content: center;
 
 }
 
 .column-container {
     padding: 3em;
-
+    flex-basis: 20%;
 }
+
 .column-container-sedan {
     background-color: hsl(31, 77%, 52%);
     border-radius: 7px 0 0 7px;
@@ -108,5 +110,23 @@ img {
 
 .button-learn-more:hover {
     background-color: inherit;
+    color: hsl(0, 0%, 95%);
     cursor: pointer;
+}
+
+
+@media (max-width: 375px) {
+    .container { 
+        width:90%;
+        flex-direction: column;
+    }
+
+    p {
+        padding-bottom: 2em;
+    }
+
+    .column-container {
+         height: 200vh; /*  dlaczego to nie dziala??!? */
+    }
+    
 }
